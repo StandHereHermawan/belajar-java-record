@@ -52,4 +52,14 @@ class CustomerTest {
         Customer customer = new Customer("1", "Hilmi", "DENGANIMI@PROTON.COM");
         assertEquals("Hello! Arief, my name is Hilmi", customer.sayHello("Arief"));
     }
+
+    @Test
+    void testRecordEqualsMethod() {
+        Customer customer1 = new Customer("1", "Hilmi", "DENGANIMI@PROTON.COM");
+        Customer customer2 = new Customer("1", "Hilmi", "DENGANIMI@PROTON.COM");
+
+        assertTrue(customer1.equals(customer2));
+        assertEquals(customer1.hashCode(), customer2.hashCode());
+        assertEquals(customer1.toString(), customer2.toString());
+    }
 }
