@@ -1,6 +1,8 @@
 package ariefbelajarteknologi.records.data;
 
-public record Point(int x, int y) {
+import ariefbelajarteknologi.records.annotation.Valid;
+
+public record Point(@Valid int x, @Valid int y) {
 
     public Point {
         System.out.println("Point Created");
