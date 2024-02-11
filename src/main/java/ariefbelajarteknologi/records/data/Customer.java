@@ -1,6 +1,7 @@
 package ariefbelajarteknologi.records.data;
 
-public record Customer(String id, String name, String email, String phone) {
+public record Customer(String id, String name, String email, String phone)
+        implements SayHello {
 
     public Customer(String id, String name, String email, String phone) {
         System.out.println("Customer Object Created");
@@ -18,6 +19,7 @@ public record Customer(String id, String name, String email, String phone) {
         this(id, name, null);
     }
 
+    @Override
     public String sayHello(String name) {
         return "Hello! " + name + ", my name is " + this.name;
     }
